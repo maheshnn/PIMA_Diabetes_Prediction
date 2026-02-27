@@ -18,7 +18,7 @@ except RepositoryNotFoundError:
     print(f"Space '{repo_id}' created.")
 
 api.upload_folder(
-    folder_path="self_paced_courses_1_mlops/data", # Uploading the data 
+    folder_path="PIMA_Diabetes_Prediction/self_paced_courses_1_mlops/data", # Uploading the data 
     repo_id=repo_id,
     repo_type=repo_type,
 )
