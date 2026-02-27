@@ -3,7 +3,7 @@ from huggingface_hub import HfApi, create_repo
 import os
 
 repo_id = "maheshnn/PIMA-Diabetes-Prediction" 
-repo_type = "space"
+repo_type = "dataset"
 
 # Initialize API client
 api = HfApi(token=os.getenv("HF_TOKEN"))
@@ -18,7 +18,7 @@ except RepositoryNotFoundError:
     print(f"Space '{repo_id}' created.")
 
 api.upload_folder(
-    folder_path="self_paced_courses_1_mlops/data",
+    folder_path="self_paced_courses_1_mlops/data", # Uploading the data 
     repo_id=repo_id,
     repo_type=repo_type,
 )
